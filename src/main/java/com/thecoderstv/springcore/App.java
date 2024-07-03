@@ -43,5 +43,12 @@ public class App {
 		*/
 		
 		// delete records
+		int res = studentService.deleteStudent(102);
+		if(res > 0) {
+			System.out.println("records deleted");
+		}
+		else {
+			System.out.println("records not deleted");
+		}
 	}
 }
