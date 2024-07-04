@@ -1,5 +1,7 @@
 package com.thecoderstv.springcore;
 
+import java.util.List;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -43,6 +45,7 @@ public class App {
 		*/
 		
 		// delete records
+		/*
 		int res = studentService.deleteStudent(102);
 		if(res > 0) {
 			System.out.println("records deleted");
@@ -50,5 +53,18 @@ public class App {
 		else {
 			System.out.println("records not deleted");
 		}
+		*/
+		
+		// get single record
+		/*
+		Student student = studentService.getStudent(102); 
+		System.out.println(student);
+		*/
+		
+		// get all records
+		List<Student> list = studentService.getAllStudent();
+//		list.forEach((st)->System.out.println(st)); // way - 1
+		list.forEach(System.out::println);
+		
 	}
 }
