@@ -2,14 +2,18 @@ package com.thecoderstv.springcore.serviceimpl;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Component;
 
 import com.thecoderstv.springcore.dao.RowMapperImpl;
 import com.thecoderstv.springcore.dao.Student;
 import com.thecoderstv.springcore.service.StudentService;
 
+@Component("studentServiceImpl")
 public class StudentServiceImpl implements StudentService {
 	
+	@Autowired
 	private JdbcTemplate jdbcTemplate;
 
 	
@@ -44,15 +48,5 @@ public class StudentServiceImpl implements StudentService {
 		List<Student> lisOfStudents = jdbcTemplate.query(query, rowMapper);
 		return lisOfStudents;
 	}
-
-	public JdbcTemplate getJdbcTemplate() {
-		return jdbcTemplate;
-	}
-
-	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
-		this.jdbcTemplate = jdbcTemplate;
-	}
-
-	
 
 }

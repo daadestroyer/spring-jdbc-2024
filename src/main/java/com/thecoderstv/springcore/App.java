@@ -21,9 +21,9 @@ public class App {
 		// insert records
 		/*
 		Student student1 = new Student();
-		student1.setId(102);
-		student1.setName("Ramesh Nigam");
-		student1.setCity("Kanpur");
+		student1.setId(104);
+		student1.setName("Suresh Nigam");
+		student1.setCity("Allahabad");
 		int res = studentService.saveStudent(student1);
 		if(res > 0) {
 			System.out.println("record inserted");

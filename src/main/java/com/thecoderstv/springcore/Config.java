@@ -31,10 +31,10 @@ public class Config {
 		return jdbcTemplate;
 	}
 
-	@Bean("studentServiceImpl")
-	public StudentService getStudentService() {
-		StudentServiceImpl studentServiceImpl = new StudentServiceImpl();
-		studentServiceImpl.setJdbcTemplate(getJdbcTemplate());
-		return studentServiceImpl;
-	}
+//	@Bean("studentServiceImpl")
+//	public StudentService getStudentService() {
+//		StudentServiceImpl studentServiceImpl = new StudentServiceImpl();
+//		studentServiceImpl.setJdbcTemplate(getJdbcTemplate());
+//		return studentServiceImpl;
+//	}
 }
