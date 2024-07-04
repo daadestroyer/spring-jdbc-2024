@@ -9,9 +9,10 @@ import com.thecoderstv.springcore.dao.Student;
 import com.thecoderstv.springcore.service.StudentService;
 
 public class StudentServiceImpl implements StudentService {
-
+	
 	private JdbcTemplate jdbcTemplate;
 
+	
 	public int saveStudent(Student student) {
 		String query = "insert into student (id,name,city) values (?,?,?)";
 		int res = jdbcTemplate.update(query, student.getId(), student.getName(), student.getCity());

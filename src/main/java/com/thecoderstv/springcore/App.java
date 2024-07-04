@@ -3,6 +3,7 @@ package com.thecoderstv.springcore;
 import java.util.List;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.thecoderstv.springcore.dao.Student;
@@ -11,7 +12,10 @@ import com.thecoderstv.springcore.serviceimpl.StudentServiceImpl;
 
 public class App {
 	public static void main(String[] args) {
-		ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
+//		ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
+		
+		ApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
+		
 		StudentService studentService = context.getBean("studentServiceImpl", StudentService.class);
 		
 		// insert records
